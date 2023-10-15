@@ -24,7 +24,9 @@ export const Login = () => {
                         <h2 className='text-display-md font-bold text-gray-800'>Welcome Back</h2>
                         <p className='text-md font-normal text-gray-500'>Glad to have you back.</p>
                     </div>
-                    <form className='flex flex-col gap-10'>
+                    <form className='flex flex-col gap-10' onSubmit={(e)=>{
+                        e.preventDefault();
+                    }}>
                         <div className='flex flex-col gap-4'>
                             <div className='space-y-[6px]'>
                                 <Label htmlFor='email'>Email</Label>
@@ -36,9 +38,9 @@ export const Login = () => {
                                 <Input id='password' placeholder='Enter password' type='password' />
                             </div>
 
-                            <p className='text-primary text-sm font-medium ml-auto cursor-pointer' onClick={()=>{
+                            <Button variant={'link'} className='text-primary text-sm font-medium ml-auto cursor-pointer' onClick={()=>{
                                 router.push('/forgot-password')
-                            }}>Forgot my password</p>
+                            }}>Forgot my password</Button>
 
                         </div>
                         <div id="btns" className='flex flex-col gap-4'>
@@ -53,9 +55,9 @@ export const Login = () => {
                     </form>
                 </div>
                 <div className='text-gray-400 text-sm font-medium'>Don't have an account?
-                    <span className='text-blue-gray-600 cursor-pointer' onClick={()=>{
+                    <Button variant={'link'}  className='pl-1 text-blue-gray-600 cursor-pointer' onClick={()=>{
                         router.push('/register')
-                    }}> Sign up</span>
+                    }}> Sign up</Button>
                 </div>
             </div>
         </div>

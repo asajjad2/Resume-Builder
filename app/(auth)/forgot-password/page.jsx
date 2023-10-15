@@ -33,9 +33,9 @@ export const ForgotPWD= () => {
                     </form>
                 </div>
                 <div className='text-sm font-medium mt-60 '>
-                    <span className='text-blue-gray-600 cursor-pointer' onClick={()=>{
+                <Button variant={'link'}  className='pl-1 text-blue-gray-600 cursor-pointer' onClick={()=>{
                         router.push('/login')
-                    }}>Back to Sign in</span>
+                    }}>Back to Sign in</Button>
                 </div>
             </div>
         </div>

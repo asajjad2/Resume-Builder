@@ -52,9 +52,9 @@ export const Register = () => {
                     </form>
                 </div>
                 <div className='text-gray-400 text-sm font-medium'>Already have an account?
-                    <span className='text-blue-gray-600 cursor-pointer' onClick={()=>{
+                    <Button variant={'link'}  className='pl-1 text-blue-gray-600 cursor-pointer' onClick={()=>{
                         router.push('/login')
-                    }}> Sign in</span>
+                    }}> Sign in</Button>
                 </div>
             </div>
         </div>
