@@ -36,7 +36,7 @@ export default function SignUp(){
     }
 
   return (
-    <>
+    <div className='max-w-screen min-h-screen bg-white'>
         {step === 0 && <Home onNext={onNext}/>}
         {step === 1 && <Intro/>}
         {step === 2 && <Experience/>}
@@ -53,6 +53,6 @@ export default function SignUp(){
             />
         }
         
-    </>
+    </div>
   )
 }

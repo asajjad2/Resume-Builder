@@ -1,12 +1,14 @@
 import React from 'react'
 import EducationCard from '@/components/educationCard'
-import Button from '@/components/ui/button'
-import InputField from '@/components/ui/input'
-import TextArea from '@/components/ui/textArea'
+import { Button } from '@/components/ui/button'
+import { InputField } from '@/components/ui/input-field'
+import { Label } from '@/components/ui/label'
+import { Textarea } from '@/components/ui/textarea'
+import { Dropdown } from '@/components/ui/dropdown'
 
 export default function Education() {
   return (
-    <div className='w-screen min-h-screen px-20 pt-10 mb-2 flex flex-col gap-8 bg-white'>
+    <div className='px-20 pt-10 mb-2 flex flex-col gap-8 bg-white'>
         <div id="headings" className='flex flex-col gap-4'>
             <h2 className='text-display-md font-bold font-pd text-gray-800'>Education</h2>
             <p className='text-text-md font-normal text-gray-500'>What are some things you’re highly educated in?</p>
@@ -33,11 +35,29 @@ export default function Education() {
                     <InputField label={'School'} placeholder={'e.g. Oxford University'}/>
                     <div className="grid grid-cols-2 gap-6">
                         <InputField label={'Field of Study'} placeholder={'e.g. Computer Science'}/>
-                        <InputField label={'Degree'} placeholder={'Select a Degree'}/>
+                        
+                        <div className='space-y-[6px]'>
+                            <Label>Degree</Label>
+                            <Dropdown
+                                title={'Select a Degree'}
+                                options={[
+                                    {label: 'Bachelor’s', value: 'bachelors'},
+                                    {label: 'Master’s', value: 'masters'},
+                                    {label: 'Doctorate', value: 'doctorate'},
+                                    {label: 'Associate', value: 'associate'},
+                                    {label: 'Diploma', value: 'diploma'},
+                                ]}
+                            />
+                        </div>
+
                         <InputField label={'Starting Date'} placeholder={'Select a Date'}/>
                         <InputField label={'Ending Date'} placeholder={'Select a Date'}/>
                     </div>
-                    <TextArea label={'Description'} placeholder={'Mention your achievements and contributions'}/>
+
+                    <div className='space-y-[6px]'>
+                        <Label>Description</Label>
+                        <Textarea label={'Description'} placeholder={'Mention your achievements and contributions'} />
+                    </div>
                     <div className='flex justify-end'>
                         <div className='w-[30%]'>
                             <Button size={'sm'} variant={'primary'}>Save Education</Button>

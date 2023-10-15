@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
 import { InputField } from '../ui/input-field'
@@ -10,7 +9,7 @@ import { InputField } from '../ui/input-field'
 export default function Introduction() {
   return (
 
-      <div className='w-screen min-h-screen bg-white px-20 pt-10'>
+      <div className='px-20 pt-10'>
 
         <div id="headings" className='flex flex-col gap-4'>
           <h2 className='text-display-md font-bold text-gray-800 font-pd'>Introduction</h2>
@@ -69,7 +68,7 @@ export default function Introduction() {
                 placeholder={'Enter Phone Number'}
                 id={'phone'}
               />
-              
+
             </div>
           </div>
 

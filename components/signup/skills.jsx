@@ -1,6 +1,8 @@
 import React from 'react'
-import Button from '@/components/ui/button'
-import InputField from '@/components/ui/input'
+import { Button } from "@/components/ui/button"
+import { InputField } from '@/components/ui/input-field'
+
+import { Search } from 'lucide-react'
 
 export default function Skills() {
 
@@ -10,13 +12,13 @@ export default function Skills() {
     ]
 
   return (
-    <div className='w-screen min-h-screen bg-white px-20 pt-10 flex flex-col gap-11'>
+    <div className='px-20 pt-10 flex flex-col gap-11'>
         <div id="headings" className='flex flex-col gap-4'>
           <h2 className='text-display-md font-bold text-gray-800 font-pd'>Skills</h2>
           <p className='text-text-md font-normal text-gray-500'>What are some things you’re highly experienced in?</p>
         </div>
         <div className='space-y-6 w-[25rem]'>
-            <InputField placeholder='Search for a skill' label='Your Skills' icon={'search'}/>
+            <InputField placeholder='Search for a skill' label='Your Skills' icon='search'/>
             <div className='flex flex-wrap gap-4'>
                 {
                     skills.map((skill, index) => {
