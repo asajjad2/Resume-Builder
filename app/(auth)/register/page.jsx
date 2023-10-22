@@ -14,16 +14,20 @@ import { Label } from "@/components/ui/label"
 export const Register = () => {
 
     const router = useRouter();
+    const handleRegister = (event) => {
+        event.preventDefault()
+        router.push('/onboarding')
+    }
 
   return (
-    <div action="" className='bg-white px-[104px] flex items-center justify-center py-20'>
+    <div action="" className='h-screen bg-white px-[104px] flex items-center justify-center py-20'>
             <div className='flex flex-col justify-between items-center gap-14'>
                 <div className='flex flex-col gap-6 w-96 '>
                     <div className='flex flex-col gap-4'>
                         <h2 className='text-display-md font-bold text-gray-800'>Create an account</h2>
                         <p className='text-md font-normal text-gray-500'>Let's get started to building the perfect resume!</p>
                     </div>
-                    <form className='flex flex-col gap-10'>
+                    <form className='flex flex-col gap-10' onSubmit={handleRegister}>
                         <div className='flex flex-col gap-4'>
                             <div className='space-y-[6px]'>
                                 <Label htmlFor='email'>Email</Label>

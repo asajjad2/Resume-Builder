@@ -1,7 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+.stepper-default{
+  @apply bg-gray-100 text-blue-gray-600;  
+}
+
+.stepper-default > span, .stepper-current > span{
+  @apply bg-blue-gray-400 text-white;
+}
+
+.stepper-current{
+  @apply bg-blue-gray-600 text-white;
+}
+
+.stepper-completed{
+  @apply bg-success-400 text-white;
+}
+
+.stepper-completed > span{
+  @apply bg-success-600 text-white;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

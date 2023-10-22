@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation';
 
-import Home from '@/components/signup/home';
 import Intro from '@/components/signup/introduction';
 import Experience from '@/components/signup/experience';
 import Skills from '@/components/signup/skills';
@@ -37,14 +36,13 @@ export default function SignUp(){
 
   return (
     <div className='max-w-screen min-h-screen bg-white'>
-        {step === 0 && <Home onNext={onNext}/>}
-        {step === 1 && <Intro/>}
-        {step === 2 && <Experience/>}
-        {step === 3 && <Skills/>}
-        {step === 4 && <Education/>}
-        {step === 5 && <Misc/>}
+        {step === 0 && <Intro/>}
+        {step === 1 && <Experience/>}
+        {step === 2 && <Skills/>}
+        {step === 3 && <Education/>}
+        {step === 4 && <Misc/>}
         {
-            step === 0 ? <></> : <Stepper
+            <Stepper
             steps={steps}
             currentStep={step}
             onPrev={onPrev}

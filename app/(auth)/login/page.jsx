@@ -17,7 +17,7 @@ export const Login = () => {
     const router = useRouter();
 
   return (
-    <div action="" className='bg-white px-[104px] flex items-center justify-center py-20'>
+    <div action="" className='h-screen bg-white px-[104px] flex items-stretch justify-center py-20'>
             <div className='flex flex-col justify-between items-center gap-14'>
                 <div className='flex flex-col gap-6 w-96'>
                     <div className='flex flex-col gap-4'>

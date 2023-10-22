@@ -3,7 +3,7 @@ import AuthSidebar from "@/components/authSideBanner"
 const AuthLayout = async ({children}) => {
 
     return (
-        <div className="flex w-screen h-screen">
+        <div className="flex max-w-screen max-h-screen" >
             <main>
                 {children}            
             </main>

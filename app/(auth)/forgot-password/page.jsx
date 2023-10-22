@@ -17,7 +17,7 @@ export const ForgotPWD= () => {
     const router = useRouter();
 
   return (
-    <div action="" className='bg-white px-[104px] flex items-center justify-center py-20'>
+    <div action="" className='h-screen bg-white px-[104px] flex items-stretch justify-center py-20'>
             <div className='flex flex-col justify-between items-center gap-14'>
                 <div className='flex flex-col gap-6 w-96 '>
                     <div className='flex flex-col gap-4'>
@@ -32,7 +32,7 @@ export const ForgotPWD= () => {
                             <Button onClick={()=>{console.log(1)}}>Reset my password</Button>
                     </form>
                 </div>
-                <div className='text-sm font-medium mt-60 '>
+                <div className='text-sm font-medium'>
                 <Button variant={'link'}  className='pl-1 text-blue-gray-600 cursor-pointer' onClick={()=>{
                         router.push('/login')
                     }}>Back to Sign in</Button>
